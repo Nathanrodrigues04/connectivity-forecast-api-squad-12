@@ -16,7 +16,32 @@ OpenAPI: `http://localhost:8080/v3/api-docs`
 
 ## Escopo
 
-API local com catálogo de modelos e previsões mockadas. Fixture igual à referência: 4 modelos ativos, 10 probes e 24 instantes (960 previsões); catálogo também contém modelo inativo. Dados fictícios. Não consulta RIPE Atlas, não treina nem executa modelos, não usa banco de dados e não exige deploy. Classificação e recomendações são regras experimentais, não padrões científicos.
+A Connectivity Forecast API é uma aplicação educacional desenvolvida em Java 17 e Spring Boot, destinada ao estudo de APIs REST e à integração com aplicações de monitoramento da qualidade da internet.
+
+A API permite consultar modelos de previsão, pontos de monitoramento e estimativas relacionadas à latência e à perda de pacotes. Também oferece recursos de comparação de modelos e recomendações sobre atividades que dependem de uma conexão estável.
+
+### Dados disponíveis
+
+O projeto utiliza dados locais de exemplo, organizados em arquivos JSON e CSV, contendo:
+
+- 4 modelos ativos de previsão;
+- 10 pontos de monitoramento;
+- 24 instantes de previsão;
+- 960 registros de previsão.
+
+### Limitações
+
+**A API não realiza medições reais nem previsões calculadas dinamicamente.** Os resultados são obtidos de dados fictícios previamente cadastrados.
+
+Além disso:
+
+- Não consulta o RIPE Atlas em tempo real;
+- Não treina nem executa modelos de aprendizado de máquina;
+- Não utiliza banco de dados;
+- Não mede diretamente a velocidade de download ou upload;
+- As classificações e recomendações são baseadas em regras experimentais, sem validação como padrões científicos.
+
+A API pode servir como backend de demonstração para o NetStatus, mas o monitoramento real da conexão deverá ser implementado separadamente.
 
 ## Estrutura
 
